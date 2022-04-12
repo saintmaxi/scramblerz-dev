@@ -173,9 +173,9 @@ p {
 
 .button {
 	touch-action: manipulation;
-	background-color: #D50B1C;
+	background-color: white;
     border: .3vw black solid;
-	color: white;
+	color: black;
 	font-size: 1.7vw;
 	line-height: 1.7vw;
 	padding: .5vw;
