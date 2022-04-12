@@ -340,6 +340,7 @@ setInterval(async()=>{
 const updateInfo = async () => {
     let userAddress = await getAddress();
     $("#account").html(`${userAddress.substr(0,9)}..`);
+    $("#account").addClass("connected");
     $("#mobile-account").text(`${userAddress.substr(0,9)}..`);
 };
 
