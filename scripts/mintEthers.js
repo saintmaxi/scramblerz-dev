@@ -256,20 +256,20 @@ const updateMintInfo = async() => {
     }
 }
 
-const updateCurrentChain = async() => {
-    if ((await getChainId()) !== correctChain) {
-        displayErrorMessage("Error: Wrong Network!", false);
-    }
-    else {
-        $("#error-popup").remove();
-        $("#block-screen-error").remove();
-    }
-}
+// const updateCurrentChain = async() => {
+//     if ((await getChainId()) !== correctChain) {
+//         displayErrorMessage("Error: Wrong Network!", false);
+//     }
+//     else {
+//         $("#error-popup").remove();
+//         $("#block-screen-error").remove();
+//     }
+// }
 
 provider.on("network", async(newNetwork, oldNetwork) => {
         if (oldNetwork) {
             $("#refresh-notification").remove();
-            await updateCurrentChain();
+            // await updateCurrentChain();
             await updateMintInfo();
         }
     });
