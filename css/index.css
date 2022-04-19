@@ -17,7 +17,9 @@
     flex-direction: row;
     justify-content: center;
     color: white !important;
-    background-color: #6FA9F2;
+    /* background-color: #6FA9F2; */
+    background-color: #5AA6F5;
+
     z-index: 9999999;
     height: 10vh !important;
     backdrop-filter: blur(10px);
@@ -117,12 +119,21 @@
     align-items: center; */
     /* background-image: url("../images/christmas-tree.png"); */
 
+    /* background-image: url("https://c4.wallpaperflare.com/wallpaper/848/877/189/8-bit-artwork-sky-landscape-wallpaper-preview.jpg");
+    background-repeat: repeat-x;
+    width: 100%;
+    background-size: contain; */
+    /* background-attachment: fixed; */
+
     height: 90%;
     min-height: 90%;
-    background-color: #6FA9F2;
+    overflow-x: hidden;
+    /* background-color: #6FA9F2; */
+    background-color: #5AA6F5;
+
     position: relative;
 
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -137,18 +148,222 @@
     cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAAAAACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAA////AABl/QDx8fEAd3d3AADa/QBVVVUA29vbABkYGADu7u4AAMv9AMzMzACTk5IA5ubmAIiIiAAAmP0A7OzsAERERADl5eUAAP39AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4ODg4ODg4ODg4OAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4ODg4ODg4ODg4AAAAAAAAAAAAAAAAAAAAAAAEBCwsLCwsLCwsLCwsLCw4ODgAAAAAAAAAAAAAAAAAAAQELCwsLCwsLCwsLCwsLDg4OAAAAAAAAAAAAABERAQEBAQEBAQEBAQEBAQEBCwsLCwsODgAAAAAAAAAAEREBAQEBAQEBAQENDQ0NDQ0SEgsLCw4OAAAAAAAAAAAREQEBAQEBAQEBAQsLCwsLCwEBCwsLDg4AAAAAAAAGBgEBAQEBAQEBCQICAgICAg4OCwsBCwsLCw4OAAAAAAYGAQEBAQEBAQEJAgICAgICDg4LCwELCwsLDg4AAAAABgYBAQEBAQEBAQIPDw8PDw8CAg4OCwEBCwsODgAAAAAGBgEBAQEBAQEBAg8PDw8PDwICDg4LAQELCw4OAAAAAAYGAQEBAQEBDw8KExMKCg8PDw8CAgsBAQsLDg4AAAAABgYBAQEBAQEPDwoTEwoKDw8PDwICCwEBCwsODgAAAAAGBgEBAQEBAQ8PExMTExMKCg8PAgILAQELCw4OAAAAAAYGAQEBAQEBDw8TExMTEwUFDw8CAgcBAQsLDg4AAAAABgYBAQEBAQEPDxMTExMTExMPDwICAQEBCwsODgAAAAAGBgEBAQEBAQEBDxMTExMKCgICCQkBAQELCw4OAAAAAAYGAQEBAQEBAQEPExMTEwoKAgIJCQEBAQsLDg4AAAAAAAAEBAEBAQEBAQEPDw8PDw8BAQEBAQEBCwsAAAAAAAAAAAQEAQEBAQEBAQ8PDw8PDwEBAQEBAQELCwAAAAAAAAAABAQBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAEBAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAADg4BAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAMDAMDAwMBAQEBAQEBAQEBARAQEAgIAAAAAAAAAAAAAAAABAQEBAEBAQEBAQEBAQEBERERAAAAAAAAAAAACgAAAAAAAAAABgYGBgYGBgYGBgYAAAAAAAAAAAAAAAAKCgAAAAAAAAAGBgYGBgYGBgYGBgAAAAAAAAAAAAAAAAoKCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////wAf//8AH//wAAP/8AAD/8AAAP/AAAD/AAAAPwAAAD8AAAA8AAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAA8AAAA/AAAAPwAAAD8AAAA/wAAA/cAAAPzwAAP8fwAf/D8AH/wf///8D////'), auto !important;
 }
 
+@keyframes fade-in {
+    0% {
+        transform: translateX(-50%);
+        /* transform: translateX(-40%); */
+      opacity: .2;
+    }
+    100% {
+    transform: translateX(0%);
+     opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        transform: translateX(-50%);
+          opacity: .2;
+    }
+    100% {
+    transform: translateX(0%);
+     opacity: 1;
+    }
+}
+
+@keyframes run1 {
+    0% {
+        left: -30%
+    }
+    100% {
+        left:100%
+    }
+}
+  
+@-webkit-keyframes run1 {
+    0% {
+        left: -30%
+    }
+    100% {
+        left:100%
+    }
+}
+
+@keyframes run2 {
+    0% {
+        left: -30%
+    }
+    100% {
+        left:100%
+    }
+}
+  
+@-webkit-keyframes run2 {
+    0% {
+        left: -30%
+    }
+    100% {
+        left:100%
+    }
+}
+
+@keyframes run3{
+    0% {
+        left: -30%
+    }
+    100% {
+        left:100%
+    }
+}
+  
+@-webkit-keyframes run3 {
+    0% {
+        left: -30%
+    }
+    100% {
+        left:100%
+    }
+}
+
+@keyframes run4 {
+    0% {
+        left: -30%
+    }
+    100% {
+        left:100%
+    }
+}
+  
+@-webkit-keyframes run4 {
+    0% {
+        left: -30%
+    }
+    100% {
+        left:100%
+    }
+}
+
+@keyframes run5 {
+    0% {
+        left: -30%
+    }
+    100% {
+        left:100%
+    }
+}
+  
+@-webkit-keyframes run5 {
+    0% {
+        left: -30%
+    }
+    100% {
+        left:100%
+    }
+}
+
+@keyframes run6 {
+    0% {
+        transform: translateX(-170vw);
+    }
+    100% {
+    transform: translateX(310vw);
+    }
+}
+  
+@-webkit-keyframes run6 {
+    0% {
+        transform: translateX(-170vw);
+    }
+    100% {
+        transform: translateX(310vw);
+    }
+}
+
+@keyframes run7 {
+    0% {
+        transform: translateX(-190vw);
+    }
+    100% {
+    transform: translateX(350vw);
+    }
+}
+  
+@-webkit-keyframes run7 {
+    0% {
+        transform: translateX(-190vw);
+    }
+    100% {
+        transform: translateX(350vw);
+    }
+}
+
 #landing-gif {
     position: absolute;
-    width: 40%;
+    width: 30%;
     bottom: 2%;
-    left: 2%;
+    left: 0vw;
+    -webkit-animation: run1 3.75s linear infinite;
+    animation: run1 3.75s linear infinite;
+}
+
+#landing-gif-2 {
+    position: absolute;
+    width: 30%;
+    bottom: 2%;
+    left: -50vw;
+    -webkit-animation: run2 3.75s linear infinite 1.25s;
+    animation: run2 3.75s linear infinite 1.25s;
+}
+
+#landing-gif-3 {
+    position: absolute;
+    width: 30%;
+    bottom: 2%;
+    left: -50vw;
+    -webkit-animation: run2 3.75s linear infinite 2.5s;
+    animation: run2 3.75s linear infinite 2.5s;
+}
+
+#landing-gif-4 {
+    position: absolute;
+    width: 30%;
+    bottom: 2%;
+    left: -50vw;
+    -webkit-animation: run2 3.75s linear infinite 2.25s;
+    animation: run2 3.75s linear infinite 2.25s;
+}
+
+#landing-gif-5 {
+    position: absolute;
+    width: 30%;
+    bottom: 2%;
+    left: -50vw;
+    -webkit-animation: run2 3.75s linear infinite 3s;
+    animation: run2 3.75s linear infinite 3s;
+}
+
+#landing-gif-6 {
+    position: absolute;
+    width: 30%;
+    bottom: 2%;
+    left: -200vw;
+    -webkit-animation: run4 10.57s linear infinite;
+    animation: run4 10.57s linear infinite;
+}
+
+#landing-gif-7 {
+    position: absolute;
+    width: 30%;
+    bottom: 2%;
+    left: -235vw;
+    -webkit-animation: run4 11.93s linear infinite;
+    animation: run4 11.93s linear infinite;
 }
 
 #landing-logo {
-    position: absolute;
+    display: block;
     width: 50%;
-    top: 2%;
-    right: 10%;
+    margin: auto;
 }
 
 #landing-info {
@@ -158,7 +373,358 @@
     right: 10%;
 }
 
-/* */
+/* end landing */
+
+/* start art */
+
+#art {
+    height: 100%;
+    position: relative;
+}
+
+@keyframes fade-in2 {
+    0% {
+        left: -15%;
+      opacity: .2;
+    }
+    100% {
+        left: 5%;
+     opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in2 {
+    0% {
+        left: -15%;
+        opacity: .2;
+    }
+    100% {
+        left: 10%;
+        opacity: 1;
+    }
+}
+
+#art-info {
+    width: 55%;
+    left: 5%;
+    position: absolute;
+}
+/* 
+#art-info.animate {
+    display: block;
+    position: absolute;
+    -webkit-animation: fade-in2 1.2s ease-out forwards;
+    animation: fade-in2 1.2s ease-out forwards;
+} */
+
+@keyframes fade-in1 {
+    0% {
+        left: -50%;
+      opacity: .2;
+    }
+    100% {
+        left: 65%;
+     opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in1 {
+    0% {
+        left: -50%;
+        opacity: .2;
+    }
+    100% {
+        left: 65%;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-body {
+    0% {
+        left: 63%;
+        top: 18%;
+        opacity: .2;
+    }
+    100% {
+        left: 65%;
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-body {
+    0% {
+        left: 63%;
+        top: 18%;
+        opacity: .2;
+    }
+    100% {
+        left: 65%;
+        top: 30%;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-torso {
+    0% {
+        left: 67%;
+        top: 21%;
+        opacity: .2;
+    }
+    100% {
+        left: 65%;
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-torso {
+    0% {
+        left: 78%;
+        top: 31%;
+        opacity: .2;
+    }
+    100% {
+        left: 65%;
+        top: 30%;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-cap {
+    0% {
+        left: 55%;
+        top: 3%;
+        opacity: .2;
+    }
+    100% {
+        left: 65%;
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-cap {
+    0% {
+        left: 55%;
+        top: 3%;
+        opacity: .2;
+    }
+    100% {
+        left: 65%;
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-mouth {
+    0% {
+        left: 49%;
+        top: 15%;
+        opacity: .2;
+    }
+    100% {
+        left: 49%;
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-mouth {
+    0% {
+        left: 53%;
+        top: 15%;
+        opacity: .2;
+    }
+    100% {
+        left: 65%;
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-eyes {
+    0% {
+        left: 72%;
+        top: 11%;
+        opacity: .2;
+    }
+    100% {
+        left: 65%;
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-eyes {
+    0% {
+        left: 72%;
+        top: 11%;
+        opacity: .2;
+    }
+    100% {
+        left: 65%;
+        top: 30%;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-shoes {
+    0% {
+        left: 55%;
+        top: 25%;
+        opacity: .2;
+    }
+    100% {
+        left: 65%;
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-shoes {
+    0% {
+        left: 55%;
+        top: 25%;
+        opacity: .2;
+    }
+    100% {
+        left: 65%;
+        top: 30%;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-shadow {
+    0% {
+        left: 65%;
+        /* top: 30%; */
+        opacity: 0;
+    }
+    100% {
+        left: 65%;
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-shadow {
+    0% {
+        left: 65%;
+        /* top: 30%; */
+        opacity: 0;
+    }
+    100% {
+        left: 65%;
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+
+.trait {
+    width: 30%;
+    position: absolute;
+    /* left: 65%;
+    top: 15%;
+    display: none; */
+}
+
+#torso {
+    left: 78%;
+    top: 31%;
+}
+
+#torso.animate {
+    display: block;
+    z-index: 5;
+    -webkit-animation: fade-in-torso .5s ease-out forwards;
+    animation: fade-in-torso .5s ease-out forwards;
+}
+
+#shoes {
+    left: 55%;
+    top: 25%;
+}
+
+#shoes.animate {
+    display: block;
+    z-index: 1;
+    -webkit-animation: fade-in-shoes .75s ease-out forwards;
+    animation: fade-in-shoes .75s ease-out forwards;
+}
+
+#cap {
+    left: 55%;
+    top: 3%;
+}
+
+#cap.animate {
+    display: block;
+    z-index: 3;
+    -webkit-animation: fade-in-cap .75s ease-out forwards;
+    animation: fade-in-cap .75s ease-out forwards;
+}
+
+#mouth {
+    left: 49%;
+    top: 15%;
+}
+
+#mouth.animate {
+    display: block;
+    z-index: 6;
+    -webkit-animation: fade-in-mouth .95s ease-out forwards;
+    animation: fade-in-mouth .95s ease-out forwards;
+}
+
+#eyes {
+    left: 72%;
+    top: 11%;
+}
+
+#eyes.animate {
+    display: block;
+    z-index: 4;
+    -webkit-animation: fade-in-eyes 1.25s ease-out forwards;
+    animation: fade-in-eyes .55s ease-out forwards;
+}
+
+#shadow {
+    left: 65%;
+    top: 15%;
+    opacity: 0;
+}
+
+#shadow.animate {
+    display: block;
+    z-index: 2;
+    -webkit-animation: fade-in-shadow 2.85s linear forwards;
+    animation: fade-in-shadow 2.85s linear forwards;
+}
+
+#body {
+    left: 63%;
+    top: 18%;
+}
+
+#body.animate {
+    display: block;
+    z-index: 2;
+    -webkit-animation: fade-in-body .35s ease-out forwards;
+    animation: fade-in-body .35s ease-out forwards;
+}
+
+#bg {
+    width: 30%;
+    position: absolute;
+    left: 65%;
+    top: 15%;
+    display: block;
+    z-index: -1;
+}
+
+/* end art */
 
 /* mint section */
 
@@ -354,7 +920,9 @@
         border-right: none;
         font-size: 5vh;
         line-height: 5vh;
-        background-color: #6FA9F2;
+        /* background-color: #6FA9F2; */
+    background-color: #5AA6F5;
+
         padding-top: 10px !important;
         margin: 0;
         padding: 2%;
@@ -413,7 +981,9 @@
     #mobile-nav-menu {
         margin-top: -100%;
         transition: all 0.4s;
-        background-color: #6FA9F2;
+        /* background-color: #6FA9F2; */
+    background-color: #5AA6F5;
+
     }
     
     #mobile-nav-menu.expanded {
@@ -496,7 +1066,9 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        background-color: #6FA9F2;
+        /* background-color: #6FA9F2; */
+    background-color: #5AA6F5;
+
         text-align: center;
         padding-top: 0px;
         padding-bottom: 10px;
@@ -523,11 +1095,16 @@
         padding-bottom: 25px;
     }
 
+    .landing-gif {
+        width: 40% !important;
+    }
+
     #landing-gif {
-        display: block;
-        position: initial;
+        /* display: block; */
+        /* position: absolute; */
+        /* position: initial;
         width: 60%;
-        margin: auto;
+        margin: auto; */
     }
     
     #landing-logo {
