@@ -53,7 +53,7 @@ function scrollStory(number) {
     $(`#info-2`).removeClass("active");
     $(`#info-3`).removeClass("active");
     $(`#info-4`).removeClass("active");
-    $(`#info-${number}`).addClass("active");
+    parentElement.scrollTop += 1;
 }
 
 document.getElementById("story-info").addEventListener('scroll', function() {
