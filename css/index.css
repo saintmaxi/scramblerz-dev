@@ -1,6 +1,6 @@
 :root {
-    --main-bg-color: #312876;
-  }
+    --landing-bg: #7CA7EB;
+}
 
 @keyframes blinker {
     50% {
@@ -18,7 +18,8 @@
     justify-content: center;
     color: white !important;
     /* background-color: #6FA9F2; */
-    background-color: #5AA6F5;
+    /* background-color: #5AA6F5; */
+    background-color: var(--landing-bg);
 
     z-index: 9999999;
     height: 10vh !important;
@@ -53,15 +54,55 @@
 
 #title {
     width: 80%;
+    height: 100%;
     letter-spacing: 5px;
+    text-align: left;
+}
+
+#corner-eyes {
+    height: 100%;
 }
 
 #header {
     width: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+  
+@-webkit-keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.header-img {
+    width: 15%;
+    background-color: transparent;
+}
+
+.header-menu:hover .header-img {
+    -webkit-animation: wiggle 1s linear infinite;
+    animation: wiggle 1s linear infinite;
 }
 
 .header-menu {
@@ -75,6 +116,7 @@
 
 .header-menu a {
     color: white;
+    width: 100%;
 }
 
 #socials {
@@ -110,7 +152,15 @@
 
 /* end header/navbar styling */
 
-/* */
+.color-block {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0%;
+    z-index: 0;
+}
+
+/* start landing styling */
 
 #landing {
     /* display: flex;
@@ -129,7 +179,8 @@
     min-height: 90%;
     overflow-x: hidden;
     /* background-color: #6FA9F2; */
-    background-color: #5AA6F5;
+    /* background-color: #5AA6F5; */
+    background-color: var(--landing-bg);
 
     position: relative;
 
@@ -139,12 +190,20 @@
     background-size: cover;
 }
 
+#landing-block {
+    background-color: #436DA8;
+}
+
 #landing h2 {
     color: white !important;
 }
 
+#coming-soon {
+    z-index: 1;
+}
+
 #coming-soon:hover {
-    background-color: white !important;
+    background-color: #e8ada9 !important;
     cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAAAAACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAA////AABl/QDx8fEAd3d3AADa/QBVVVUA29vbABkYGADu7u4AAMv9AMzMzACTk5IA5ubmAIiIiAAAmP0A7OzsAERERADl5eUAAP39AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4ODg4ODg4ODg4OAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4ODg4ODg4ODg4AAAAAAAAAAAAAAAAAAAAAAAEBCwsLCwsLCwsLCwsLCw4ODgAAAAAAAAAAAAAAAAAAAQELCwsLCwsLCwsLCwsLDg4OAAAAAAAAAAAAABERAQEBAQEBAQEBAQEBAQEBCwsLCwsODgAAAAAAAAAAEREBAQEBAQEBAQENDQ0NDQ0SEgsLCw4OAAAAAAAAAAAREQEBAQEBAQEBAQsLCwsLCwEBCwsLDg4AAAAAAAAGBgEBAQEBAQEBCQICAgICAg4OCwsBCwsLCw4OAAAAAAYGAQEBAQEBAQEJAgICAgICDg4LCwELCwsLDg4AAAAABgYBAQEBAQEBAQIPDw8PDw8CAg4OCwEBCwsODgAAAAAGBgEBAQEBAQEBAg8PDw8PDwICDg4LAQELCw4OAAAAAAYGAQEBAQEBDw8KExMKCg8PDw8CAgsBAQsLDg4AAAAABgYBAQEBAQEPDwoTEwoKDw8PDwICCwEBCwsODgAAAAAGBgEBAQEBAQ8PExMTExMKCg8PAgILAQELCw4OAAAAAAYGAQEBAQEBDw8TExMTEwUFDw8CAgcBAQsLDg4AAAAABgYBAQEBAQEPDxMTExMTExMPDwICAQEBCwsODgAAAAAGBgEBAQEBAQEBDxMTExMKCgICCQkBAQELCw4OAAAAAAYGAQEBAQEBAQEPExMTEwoKAgIJCQEBAQsLDg4AAAAAAAAEBAEBAQEBAQEPDw8PDw8BAQEBAQEBCwsAAAAAAAAAAAQEAQEBAQEBAQ8PDw8PDwEBAQEBAQELCwAAAAAAAAAABAQBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAEBAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAADg4BAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAMDAMDAwMBAQEBAQEBAQEBARAQEAgIAAAAAAAAAAAAAAAABAQEBAEBAQEBAQEBAQEBERERAAAAAAAAAAAACgAAAAAAAAAABgYGBgYGBgYGBgYAAAAAAAAAAAAAAAAKCgAAAAAAAAAGBgYGBgYGBgYGBgAAAAAAAAAAAAAAAAoKCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////wAf//8AH//wAAP/8AAD/8AAAP/AAAD/AAAAPwAAAD8AAAA8AAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAA8AAAA/AAAAPwAAAD8AAAA/wAAA/cAAAPzwAAP8fwAf/D8AH/wf///8D////'), auto !important;
 }
 
@@ -297,14 +356,20 @@
     }
 }
 
-#landing-gif {
+/* #landing-gif {
+    position: absolute;
+    width: 40%;
+    right: 10%;
+} */
+
+/* #landing-gif {
     position: absolute;
     width: 30%;
     bottom: 2%;
     left: 0vw;
     -webkit-animation: run1 3.75s linear infinite;
     animation: run1 3.75s linear infinite;
-}
+} */
 
 #landing-gif-2 {
     position: absolute;
@@ -360,17 +425,53 @@
     animation: run4 11.93s linear infinite;
 }
 
-#landing-logo {
-    display: block;
-    width: 50%;
-    margin: auto;
-}
-
-#landing-info {
+#landing-gif {
     position: absolute;
     width: 40%;
-    bottom: 25%;
-    right: 10%;
+    bottom: 10%;
+    left: 2%;
+    -webkit-animation: fade-in .75s ease-out;
+    animation: fade-in .75s ease-out;
+}
+
+#landing-logo {
+    position: absolute;
+    width: 60%;
+    top: 15%;
+    right: 5%;
+    z-index: 2;
+}
+
+#coming-soon {
+    position: absolute;
+    width: 16%;
+    bottom: 5%;
+    right: 3%;
+} 
+
+#sound-control {
+    position: absolute;
+    background-color: #DF8C87;
+    border-radius: 1vw;
+    border: solid .3vw black;
+    width: 5vw;
+    height: 5vw;
+    padding: .5vw;
+    bottom: 5%;
+    left: 3%;
+    z-index: 9;
+} 
+
+#sound-control:hover {
+    cursor: pointer !important;
+} 
+
+#landing button {
+    background-color: #DF8C87;
+    color: white;
+    height: 5vw;
+    border-radius: 1vw;
+    padding: .5vw;
 }
 
 /* end landing */
@@ -921,7 +1022,8 @@
         font-size: 5vh;
         line-height: 5vh;
         /* background-color: #6FA9F2; */
-    background-color: #5AA6F5;
+    /* background-color: #5AA6F5; */
+    background-color: var(--landing-bg);
 
         padding-top: 10px !important;
         margin: 0;
@@ -982,7 +1084,9 @@
         margin-top: -100%;
         transition: all 0.4s;
         /* background-color: #6FA9F2; */
-    background-color: #5AA6F5;
+    /* background-color: #5AA6F5; */
+    background-color: var(--landing-bg);
+
 
     }
     
@@ -1067,7 +1171,9 @@
         align-items: center;
         justify-content: space-evenly;
         /* background-color: #6FA9F2; */
-    background-color: #5AA6F5;
+    /* background-color: #5AA6F5; */
+    background-color: var(--landing-bg);
+
 
         text-align: center;
         padding-top: 0px;
@@ -1095,9 +1201,9 @@
         padding-bottom: 25px;
     }
 
-    .landing-gif {
+    /* .landing-gif {
         width: 40% !important;
-    }
+    } */
 
     #landing-gif {
         /* display: block; */
@@ -1106,7 +1212,35 @@
         width: 60%;
         margin: auto; */
     }
+    /* #landing-gif {
+        position: absolute;
+        width: 40%;
+        bottom: 2%;
+        left: 2%;
+    } */
+
+    /* #landing-gif {
+        position: absolute;
+        width: 40%;
+        right: 10%;
+    }
     
+    #landing-logo {
+        position: absolute;
+        width: 50%;
+        top: 2%;
+        right: 10%;
+    }
+
+    #landing-info {
+        position: absolute;
+        width: 40%;
+        bottom: 25%;
+        right: 10%;
+    } */
+
+
+/*     
     #landing-logo {
         display: block;
         position: initial;
@@ -1120,9 +1254,9 @@
         margin: auto;
     }
 
-    #landing-info button {
+    /* #landing-info button {
         width: 90%;
-    }
+    } */ */
 
     /* end landing */
 

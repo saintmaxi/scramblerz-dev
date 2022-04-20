@@ -25,3 +25,19 @@ $('#mouth').on("animationend", function(){
 // $('#shoes').on("animationend", function(){
 //     $("#art-info").addClass("animate");
 // });
+
+var muted = true;
+var audio = $("#song")[0];
+
+function mute() {
+    if (muted) {
+        muted = false;
+        $("#sound-control").attr("src", "./images/unmute.png");
+        audio.play();
+    }
+    else {
+        muted = true;
+        $("#sound-control").attr("src", "./images/mute.png");
+        audio.pause();
+    }
+}
