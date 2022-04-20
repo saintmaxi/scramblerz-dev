@@ -66,29 +66,113 @@ document.getElementById("story-info").addEventListener('scroll', function() {
     var info4 = $('#info-4');
 	var position4 = info4.position();
 
+    let multiplier = .25 //if mobile change to .5
+
 	// checking whether fully visible
-    if (position4.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*.25)) {
+    if (position4.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*multiplier)) {
         $(`#scroll-1-`).removeClass("active");
         $(`#scroll-2`).removeClass("active");
         $(`#scroll-3`).removeClass("active");
         $(`#scroll-4`).addClass("active");
 	}
-    else if (position3.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*.25)) {
+    else if (position3.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*multiplier)) {
         $(`#scroll-1`).removeClass("active");
         $(`#scroll-2`).removeClass("active");
         $(`#scroll-3`).addClass("active");
         $(`#scroll-4`).removeClass("active");
 	}
-    else if (position2.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*.25)) {
+    else if (position2.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*multiplier)) {
         $(`#scroll-1`).removeClass("active");
         $(`#scroll-2`).addClass("active");
         $(`#scroll-3`).removeClass("active");
         $(`#scroll-4`).removeClass("active");
 	}
-	else if (position1.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*.25)) {
+	else if (position1.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*multiplier)) {
         $(`#scroll-1`).addClass("active");
         $(`#scroll-2`).removeClass("active");
         $(`#scroll-3`).removeClass("active");
         $(`#scroll-4`).removeClass("active");
 	}
 });
+
+var currentMember = 0;
+const teamMembers = [
+    {
+        name: "Daniel<br>Norris",
+        bio: "Something about Daniel goes here. Yadda yadda yadda.",
+        img: "./images/stationaryegg.png",
+        twitter: "https://twitter.com/dannyshelby_eth"
+    },
+    {
+        name: "Charlotte<br>(ROLE)",
+        bio: "Something about Charlotte goes here. Blah blah blah.",
+        img: "./images/member2.png",
+        twitter: "https://twitter.com/saintmaxiv"
+    },
+    {
+        name: "Member 3<br>(ROLE)",
+        bio: "Something about Member 3 goes here. Blah blah blah.",
+        img: "./images/stationaryegg.png",
+        twitter: "https://twitter.com/dannyshelby_eth"
+    },
+    {
+        name: "Member 4<br>(ROLE)",
+        bio: "Something about Member 4 goes here. Blah blah blah.",
+        img: "./images/member2.png",
+        twitter: "https://twitter.com/saintmaxiv"
+    }
+]
+
+function showPrevMember() {
+    if (currentMember != 0) {
+        currentMember -= 1;
+        let member = teamMembers[currentMember]
+        $("#member-name").html(member.name);
+        $("#member-description").html(member.bio);
+        $("#member-img").attr("src", member.img);
+        $("#member-twitter-link").attr("href", member.twitter);
+
+        if (currentMember == 0) {
+            $("#team-controls #left").addClass("disabled");
+            $("#mobile-team-controls #left").addClass("disabled");
+        }
+        else {
+            $("#team-controls #left").removeClass("disabled");
+            $("#mobile-team-controls #left").removeClass("disabled");
+        }
+        if (currentMember == (teamMembers.length - 1)) {
+            $("#right").addClass("disabled");
+        }
+        else {
+            $("#right").removeClass("disabled");
+        }
+    }
+}
+
+function showNextMember() {
+    if (currentMember != (teamMembers.length - 1)) {
+        currentMember += 1;
+        let member = teamMembers[currentMember]
+        $("#member-name").html(member.name);
+        $("#member-description").html(member.bio);
+        $("#member-img").attr("src", member.img);
+        $("#member-twitter-link").attr("href", member.twitter);
+
+        if (currentMember == 0) {
+            $("#team-controls #left").addClass("disabled");
+            $("#mobile-team-controls #left").addClass("disabled");
+        }
+        else {
+            $("#team-controls #left").removeClass("disabled");
+            $("#mobile-team-controls #left").removeClass("disabled");
+        }
+        if (currentMember == (teamMembers.length - 1)) {
+            $("#team-controls #right").addClass("disabled");
+            $("#mobile-team-controls #right").addClass("disabled");
+        }
+        else {
+            $("#team-controls #right").removeClass("disabled");
+            $("#mobile-team-controls #right").removeClass("disabled");
+        }
+    }
+}
