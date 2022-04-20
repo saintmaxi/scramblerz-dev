@@ -41,3 +41,54 @@ function mute() {
         audio.pause();
     }
 }
+
+function scrollStory(number) {
+    // $('#story-info').scrollTop($('#story-info').scrollTop() + $(`#info-${number}`).position().top);
+    var parentElement = document.querySelector('#story-info');
+    var childElement = document.querySelector(`#info-${number}`);
+  
+    parentElement.scrollTop = childElement.offsetTop - parentElement.offsetTop - $("#story-info").innerHeight()*.25;
+
+    $(`#info-1`).removeClass("active");
+    $(`#info-2`).removeClass("active");
+    $(`#info-3`).removeClass("active");
+    $(`#info-4`).removeClass("active");
+    $(`#info-${number}`).addClass("active");
+}
+
+document.getElementById("story-info").addEventListener('scroll', function() {
+	var info1 = $('#info-1');
+	var position1 = info1.position();
+    var info2 = $('#info-2');
+	var position2 = info2.position();
+    var info3 = $('#info-3');
+	var position3 = info3.position();
+    var info4 = $('#info-4');
+	var position4 = info4.position();
+
+	// checking whether fully visible
+    if (position4.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*.25)) {
+        $(`#scroll-1-`).removeClass("active");
+        $(`#scroll-2`).removeClass("active");
+        $(`#scroll-3`).removeClass("active");
+        $(`#scroll-4`).addClass("active");
+	}
+    else if (position3.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*.25)) {
+        $(`#scroll-1`).removeClass("active");
+        $(`#scroll-2`).removeClass("active");
+        $(`#scroll-3`).addClass("active");
+        $(`#scroll-4`).removeClass("active");
+	}
+    else if (position2.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*.25)) {
+        $(`#scroll-1`).removeClass("active");
+        $(`#scroll-2`).addClass("active");
+        $(`#scroll-3`).removeClass("active");
+        $(`#scroll-4`).removeClass("active");
+	}
+	else if (position1.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*.25)) {
+        $(`#scroll-1`).addClass("active");
+        $(`#scroll-2`).removeClass("active");
+        $(`#scroll-3`).removeClass("active");
+        $(`#scroll-4`).removeClass("active");
+	}
+});
