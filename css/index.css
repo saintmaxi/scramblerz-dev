@@ -864,6 +864,10 @@
     background-color: rgb(255, 255, 17);
 }
 
+#story-info-scroll div:hover{
+    cursor: pointer;
+}
+
 #story-info {
     position: absolute;
     left: 10%;
