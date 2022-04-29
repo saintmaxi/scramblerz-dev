@@ -854,9 +854,20 @@
 /* start story */
 
 #story {
-    background-color: #9598E8;
+    /* background-color: #9598E8; */
     position: relative;
     height: 100%;
+}
+
+#story h1 {
+    color: black !important;
+    margin: 0 !important;
+}
+
+#story p {
+    color: black !important;
+    font-size: 1.2vw !important;
+    line-height: 2vw !important;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -864,8 +875,29 @@
     display: none;
   }
 
+  mark {
+    /* margin: 0 -0.4em;
+    padding: 0.1em 0.4em;
+    border-radius: 0.8em 0.3em;
+    background: transparent;
+    background-image: linear-gradient(
+      to right,
+      #6383b16f,
+      #1e58aada 4%,
+      #1b59afd4
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: white; */
+    background: url(../images/blue.png);
+background-repeat: no-repeat;
+background-size: 100% 95%;
+padding: 8px 20px;
+color: white;
+  }
+  
 #story-block {
-    background-color: #3B4493;
+    /* background-color: #3B4493; */
 }
 
 #story-info-scroll {
@@ -879,11 +911,12 @@
 #story-info-scroll div{
     height: 20%;
     margin-bottom: 100%;
-    background-color: white;
+    border-radius: 20px;
+    background-color: lightgray;
 }
 
 #story-info-scroll div.active{
-    background-color: rgb(255, 255, 17);
+    background-color: #436DA8;
 }
 
 #story-info-scroll div:hover{
@@ -1772,6 +1805,11 @@
         left: 8%;
         padding-top: 0;
         height: 85%;
+    }
+
+    #story p {
+		font-size: 2.4vh !important;
+		line-height: 3.8vh !important;
     }
 
 	#story-info h2 {
