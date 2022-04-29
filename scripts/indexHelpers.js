@@ -101,7 +101,10 @@ const teamMembers = [
         name: "Daniel<br>Norris",
         bio: "Something about Daniel goes here. Yadda yadda yadda.",
         img: "./images/stationaryegg.png",
-        twitter: "https://twitter.com/dannyshelby_eth"
+        twitter: "https://twitter.com/dannyshelby_eth",
+        stats: {
+            //insert specific stats here, change ids in index html
+        }
     },
     {
         name: "Charlotte<br>(ROLE)",

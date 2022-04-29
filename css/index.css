@@ -47,7 +47,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: 15%;
     font-size: 1.8vw;
     line-height: 1.8vw;
     text-align: center;
@@ -195,6 +195,16 @@
     background-color: #436DA8;
 }
 
+#landing-caption {
+    color: white;
+    text-align: center;
+    position: absolute;
+    width: 50%;
+    bottom: 40%;
+    right: 13%;
+    z-index: 9999;
+}
+
 #landing h2 {
     color: white !important;
 }
@@ -202,6 +212,13 @@
 #coming-soon {
     z-index: 1;
 }
+
+#coming-soon {
+    position: absolute;
+    width: 20%;
+    bottom: 8%;
+    right: 6%;
+} 
 
 #coming-soon:hover {
     background-color: #e8ada9 !important;
@@ -443,24 +460,29 @@
     z-index: 2;
 }
 
-#coming-soon {
-    position: absolute;
-    width: 16%;
-    bottom: 5%;
-    right: 3%;
-} 
+#sound-div {
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 #sound-control {
-    position: absolute;
-    background-color: #DF8C87;
+    /* position: absolute; */
+    background-color: #436DA8;
     border-radius: 1vw;
-    border: solid .3vw black;
-    width: 5vw;
-    height: 5vw;
+    border: solid .25vw black;
+    /* width: 5vw;
+    height: 5vw; */
     padding: .5vw;
-    bottom: 5%;
-    left: 3%;
+    padding-left: .75vw;
+    padding-right: .75vw;
+    /* bottom: 5%;
+    left: 3%; */
     z-index: 9;
+    width: 5vw;
+    height: 4vw;
 } 
 
 #sound-control:hover {
@@ -1233,13 +1255,23 @@
         /* background-color: #6FA9F2; */
     /* background-color: #5AA6F5; */
     background-color: var(--landing-bg);
-
+        text-align: center;
+        display: block;
         padding-top: 10px !important;
         margin: 0;
         padding: 2%;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
+    }
 
+    #title {
+        text-align: center;
+        width: 100% !important;
+    }
+
+    #corner-eyes {
+        height: initial;
+        width: 25%;
     }
 
     #socials {
@@ -1369,7 +1401,12 @@
         touch-action: manipulation;
         width: 15%;
         display: block !important;
-        background-color: white;
+        border: none;
+        position: absolute;
+        top: 3%;
+        left: 3%;
+        z-index: 99999;
+        background-color: transparent;
         background-image: url("../images/burger.png");
         background-size: 100% 100%;
     }
@@ -1411,57 +1448,26 @@
         height: 90%;
     }
 
-    /* .landing-gif {
-        width: 40% !important;
-    } */
-
     #landing-gif {
-        display: block; 
-        position: relative; 
-        width: 60%;
-        margin: auto;
+        /* display: block; 
+        position: relative;  */
+        width: 90%;
+        left: -13%;
+        bottom: 10%;
         z-index: 10;
     }
 
-    /* .color-block {
-        height: 20%;
-    } */
+    .color-block {
+        height: 40%;
+    }
 
     #coming-soon {
-        display: block; 
         position: absolute; 
-        bottom: 7.5%;
-        left: 2.5%;
-        width: 95%;
-        margin: auto;
-    }
-
-    /* #landing-gif {
-        position: absolute;
-        width: 40%;
-        bottom: 2%;
-        left: 2%;
-    } */
-
-    /* #landing-gif {
-        position: absolute;
-        width: 40%;
-        right: 10%;
-    }
-    
-    #landing-logo {
-        position: absolute;
+        bottom: 50%;
+        right: 1.5%;
         width: 50%;
-        top: 2%;
-        right: 10%;
+        z-index: 1000000;
     }
-
-    #landing-info {
-        position: absolute;
-        width: 40%;
-        bottom: 25%;
-        right: 10%;
-    } */
 
 
     #landing-logo {
@@ -1470,24 +1476,6 @@
         width: 100%;
 
     }
-
-/*     
-    #landing-logo {
-        display: block;
-        position: initial;
-        width: 100%;
-    }
-
-    #landing-info {
-        display: block;
-        position: initial;
-        width: 95%;
-        margin: auto;
-    }
-
-    /* #landing-info button {
-        width: 90%;
-    } */ */
 
     /* end landing */
 
