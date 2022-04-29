@@ -1833,6 +1833,7 @@
 
     #mobile-team-controls img {
        width: 20%;
+       touch-action: manipulation;
     }
 
     #member-twitter {
