@@ -1403,8 +1403,8 @@
         display: block !important;
         border: none;
         position: absolute;
-        top: 3%;
-        left: 3%;
+        top: 2px;
+        left: 2px;
         z-index: 99999;
         background-color: transparent;
         background-image: url("../images/burger.png");
@@ -1443,7 +1443,7 @@
 
     #landing {
         text-align: center;
-        padding-top: 25px;
+        padding-top: 10px;
         padding-bottom: 25px;
         height: 90%;
     }
@@ -1451,9 +1451,9 @@
     #landing-gif {
         /* display: block; 
         position: relative;  */
-        width: 90%;
+        width: 80%;
         left: -13%;
-        bottom: 10%;
+        bottom: 5%;
         z-index: 10;
     }
 
@@ -1463,7 +1463,7 @@
 
     #coming-soon {
         position: absolute; 
-        bottom: 50%;
+        bottom: 45%;
         right: 1.5%;
         width: 50%;
         z-index: 1000000;
