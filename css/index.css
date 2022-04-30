@@ -2119,7 +2119,7 @@ color: white;
     #team-member-controls {
         position: absolute;
         width: 25%;
-        top: 5%;
+        top: 3%;
         right: 5%;
         display: flex !important;
         flex-direction: row;
