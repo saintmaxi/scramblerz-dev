@@ -1528,7 +1528,6 @@ color: white;
     #next-info {
         border-width: 5px;
         width: 15vw;
-        margin-bottom: 10px;
         border-radius: 20px;
     }
     
@@ -1997,6 +1996,10 @@ color: white;
     /* end art section styling */
 
     /* start story section styling */
+
+    #story {
+        padding-top: 40px !important;
+    }
 
     mark {
         padding: 6px 10px;
