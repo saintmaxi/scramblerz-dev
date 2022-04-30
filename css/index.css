@@ -857,6 +857,8 @@
     /* background-color: #9598E8; */
     position: relative;
     height: 100%;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
 }
 
 #story h1 {
@@ -1794,6 +1796,10 @@ color: white;
     /* end art section styling */
 
     /* start story section styling */
+
+    mark {
+    padding: 6px 10px;
+    }
 
     #story-info-scroll {
         height: 80%;
