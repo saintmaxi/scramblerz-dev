@@ -49,15 +49,15 @@ function scrollStory(number) {
     var parentElement = document.querySelector('#story-info');
     var childElement = document.querySelector(`#info-${number}`);
 
-    // let multiplier = windowsize >= 991 ? .25 : 0;
-    multiplier=0
+    let multiplier = windowsize >= 991 ? .05 : 0;
+    // multiplier=0
   
     parentElement.scrollTop = childElement.offsetTop - parentElement.offsetTop - $("#story-info").innerHeight()*multiplier;
 
     $(`#info-1`).removeClass("active");
     $(`#info-2`).removeClass("active");
     $(`#info-3`).removeClass("active");
-    $(`#info-4`).removeClass("active");
+    // $(`#info-4`).removeClass("active");
     parentElement.scrollTop += 1;
 }
 
@@ -68,20 +68,20 @@ document.getElementById("story-info").addEventListener('scroll', function() {
 	var position2 = info2.position();
     var info3 = $('#info-3');
 	var position3 = info3.position();
-    var info4 = $('#info-4');
-	var position4 = info4.position();
+    // var info4 = $('#info-4');
+	// var position4 = info4.position();
 
-    let multiplier = windowsize >= 991 ? .25 : .5;
+    let multiplier = windowsize >= 991 ? .25 : .55;
     // let multiplier = 0
 
 	// checking whether fully visible
-    if (position4.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*multiplier)) {
-        $(`#scroll-1-`).removeClass("active");
-        $(`#scroll-2`).removeClass("active");
-        $(`#scroll-3`).removeClass("active");
-        $(`#scroll-4`).addClass("active");
-	}
-    else if (position3.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*multiplier)) {
+    // if (position4.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*multiplier)) {
+    //     $(`#scroll-1-`).removeClass("active");
+    //     $(`#scroll-2`).removeClass("active");
+    //     $(`#scroll-3`).removeClass("active");
+    //     $(`#scroll-4`).addClass("active");
+	// }
+    if (position3.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*multiplier)) {
         $(`#scroll-1`).removeClass("active");
         $(`#scroll-2`).removeClass("active");
         $(`#scroll-3`).addClass("active");
