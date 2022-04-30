@@ -1009,6 +1009,7 @@ color: white;
     width: 40%;
     top: 15%;
     z-index: -1;
+    opacity: 0.1;
 }
 
 

@@ -101,8 +101,8 @@ document.getElementById("story-info").addEventListener('scroll', function() {
 	}
 });
 
-let story = $("#story").position().top;
-let team =  $("#team").position().top;
+var story = $("#story").position().top;
+var team =  $("#team").position().top;
 
 document.addEventListener('scroll', function() {
     let currentTop = $(window).scrollTop();
@@ -122,6 +122,27 @@ document.addEventListener('scroll', function() {
         $("#top").removeClass("landing");
     }
 });
+
+var info1Top = $('#info-1').position().top;
+var info3Top = $('#info-3').position().top;
+let infoDist = info3Top - info1Top;
+var infoScrollEffectOn = true;
+
+document.getElementById("story-info").addEventListener('scroll', function() {
+    if (infoScrollEffectOn) {
+        let info3CurrentTop = $("#info-3").position().top;
+        let currentDist = info3CurrentTop - info1Top;
+        let scrollPercentage = (infoDist-currentDist)/infoDist;
+        if (scrollPercentage > 0.1) {
+            $("#story-img").css("opacity", scrollPercentage);
+        }
+        if (scrollPercentage > 0.9) {
+            $("#story-img").attr("src", "./images/egg1.gif");
+            infoScrollEffectOn = false;
+        }
+    }
+});
+
 
 var currentMember = 0;
 const teamMembers = [
