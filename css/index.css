@@ -1364,6 +1364,12 @@ color: white;
     #logo-img img {
         border-width: 5px;
     }
+
+    #next-info {
+        border-width: 5px;
+        width: 15vw;
+        border-radius: 20px;
+    }
     
     #title {
         width: 85%;
@@ -1856,9 +1862,22 @@ color: white;
 		line-height: 3.8vh !important;
     }
 
+    #story-info h1 {
+        padding-left: 10px;
+    }
+
 	#story-info h2 {
-		text-align: center;
+		text-align: left;
+        font-size:  3.4vh;
+		line-height: 3.4vh;
+        padding-left: 10px;
 	}
+    
+    #story h4 {
+		font-size:  2vh;
+		line-height:  2.4vh;
+        padding-left: 10px;
+    }
 
     /* end story section styling */
 
