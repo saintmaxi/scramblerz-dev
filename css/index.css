@@ -2116,6 +2116,10 @@ color: white;
 
     /* mission start */
 
+    #mission {
+        height: 120% !important;
+    }
+
     #team-member-controls {
         position: absolute;
         width: 25%;
