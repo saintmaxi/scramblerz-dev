@@ -42,12 +42,16 @@ function mute() {
     }
 }
 
+var windowsize = $(window).width();
+
 function scrollStory(number) {
     // $('#story-info').scrollTop($('#story-info').scrollTop() + $(`#info-${number}`).position().top);
     var parentElement = document.querySelector('#story-info');
     var childElement = document.querySelector(`#info-${number}`);
+
+    let multiplier = windowsize >= 991 ? .25 : 0;
   
-    parentElement.scrollTop = childElement.offsetTop - parentElement.offsetTop - $("#story-info").innerHeight()*.25;
+    parentElement.scrollTop = childElement.offsetTop - parentElement.offsetTop - $("#story-info").innerHeight()*multiplier;
 
     $(`#info-1`).removeClass("active");
     $(`#info-2`).removeClass("active");
@@ -66,7 +70,7 @@ document.getElementById("story-info").addEventListener('scroll', function() {
     var info4 = $('#info-4');
 	var position4 = info4.position();
 
-    let multiplier = .25 //if mobile change to .5
+    let multiplier = windowsize >= 991 ? .25 : .5;
 
 	// checking whether fully visible
     if (position4.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*multiplier)) {
