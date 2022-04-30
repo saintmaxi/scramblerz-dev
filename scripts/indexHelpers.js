@@ -49,7 +49,8 @@ function scrollStory(number) {
     var parentElement = document.querySelector('#story-info');
     var childElement = document.querySelector(`#info-${number}`);
 
-    let multiplier = windowsize >= 991 ? .25 : 0;
+    // let multiplier = windowsize >= 991 ? .25 : 0;
+    multiplier=0
   
     parentElement.scrollTop = childElement.offsetTop - parentElement.offsetTop - $("#story-info").innerHeight()*multiplier;
 
@@ -71,6 +72,7 @@ document.getElementById("story-info").addEventListener('scroll', function() {
 	var position4 = info4.position();
 
     let multiplier = windowsize >= 991 ? .25 : .5;
+    // let multiplier = 0
 
 	// checking whether fully visible
     if (position4.top <= ($("#story-info").position().top + $("#story-info").innerHeight()*multiplier)) {

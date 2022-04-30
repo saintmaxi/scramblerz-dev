@@ -4,8 +4,13 @@
 }  
 
 @font-face {  
-	font-family: 'Robot';
+	font-family: 'Round';
 	src: URL('../css/nunito.extrabold.ttf') format('truetype');
+}  
+
+@font-face {  
+	font-family: 'Robot';
+	src: URL('../css/cheyenne-sans.semibold.ttf') format('truetype');
 }  
 
 @font-face {  

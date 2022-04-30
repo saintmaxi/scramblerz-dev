@@ -857,7 +857,7 @@
     /* background-color: #9598E8; */
     position: relative;
     height: 100%;
-    padding-top: 20px !important;
+    /* padding-top: 20px !important; */
     padding-bottom: 20px !important;
 }
 
@@ -870,6 +870,12 @@
     color: black !important;
     font-size: 1.2vw !important;
     line-height: 2vw !important;
+}
+
+#ellipses {
+    color:#436DA8;
+    /* font-size: 6vw; */
+    font-family: "Round"
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -894,7 +900,7 @@
     background: url(../images/blue.png);
 background-repeat: no-repeat;
 background-size: 100% 95%;
-padding: 8px 20px;
+padding: 6px 20px;
 color: white;
   }
   
@@ -925,13 +931,17 @@ color: white;
     cursor: pointer;
 }
 
+.info-wrapper {
+    width: 56.25%;
+}
+
 #story-info {
     position: absolute;
     left: 10%;
-    padding-top: 5%;
-    height: 93%;
+    height: 100%;
+    padding-top: 10vh;
     overflow-y: scroll;
-    width: 45%;
+    width: 80%;
     color: white;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -946,6 +956,7 @@ color: white;
     right: 3%;
     width: 40%;
     top: 15%;
+    z-index: -1;
 }
 
 
@@ -1798,7 +1809,7 @@ color: white;
     /* start story section styling */
 
     mark {
-    padding: 6px 10px;
+        padding: 6px 10px;
     }
 
     #story-info-scroll {
@@ -1811,6 +1822,10 @@ color: white;
         left: 8%;
         padding-top: 0;
         height: 85%;
+    }
+
+    .info-wrapper {
+        width: 100%;
     }
 
     #story p {
