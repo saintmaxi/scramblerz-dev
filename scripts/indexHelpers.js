@@ -101,10 +101,32 @@ document.getElementById("story-info").addEventListener('scroll', function() {
 	}
 });
 
+let story = $("#story").position().top;
+let team =  $("#team").position().top;
+
+document.addEventListener('scroll', function() {
+    let currentTop = $(window).scrollTop();
+    if (currentTop < story) {
+        $("#top").addClass("landing");
+        $("#top").removeClass("team");
+        $("#top").removeClass("story");
+    }
+    else if (currentTop >= story && currentTop < team) {
+        $("#top").addClass("story");
+        $("#top").removeClass("landing");
+        $("#top").removeClass("team");
+    }
+    else if (currentTop >= team) {
+        $("#top").addClass("team");
+        $("#top").removeClass("story");
+        $("#top").removeClass("landing");
+    }
+});
+
 var currentMember = 0;
 const teamMembers = [
     {
-        name: "Daniel<br>Norris",
+        name: "DANIEL<br>NORRIS",
         bio: "Something about Daniel goes here. Yadda yadda yadda.",
         img: "./images/stationaryegg.png",
         twitter: "https://twitter.com/dannyshelby_eth",
@@ -113,22 +135,16 @@ const teamMembers = [
         }
     },
     {
-        name: "Charlotte<br>(ROLE)",
+        name: "CHARLOTTE<br>UDDFORS",
         bio: "Something about Charlotte goes here. Blah blah blah.",
         img: "./images/member2.png",
         twitter: "https://twitter.com/saintmaxiv"
     },
     {
-        name: "Member 3<br>(ROLE)",
-        bio: "Something about Member 3 goes here. Blah blah blah.",
+        name: "WIN<br>HOMER",
+        bio: "Something about Win goes here. Blah blah blah.",
         img: "./images/stationaryegg.png",
         twitter: "https://twitter.com/dannyshelby_eth"
-    },
-    {
-        name: "Member 4<br>(ROLE)",
-        bio: "Something about Member 4 goes here. Blah blah blah.",
-        img: "./images/member2.png",
-        twitter: "https://twitter.com/saintmaxiv"
     }
 ]
 
@@ -136,24 +152,24 @@ function showPrevMember() {
     if (currentMember != 0) {
         currentMember -= 1;
         let member = teamMembers[currentMember]
-        $("#member-name").html(member.name);
-        $("#member-description").html(member.bio);
-        $("#member-img").attr("src", member.img);
-        $("#member-twitter-link").attr("href", member.twitter);
+        $("#team-member-name").html(member.name);
+        $("#team-member-caption").html(member.bio);
+        // $("#member-img").attr("src", member.img);
+        $("#team-member-twitter-link").attr("href", member.twitter);
 
         if (currentMember == 0) {
-            $("#team-controls #left").addClass("disabled");
-            $("#mobile-team-controls #left").addClass("disabled");
+            $("#team-member-controls #prev-member").addClass("disabled");
+            // $("#mobile-team-controls #left").addClass("disabled");
         }
         else {
-            $("#team-controls #left").removeClass("disabled");
-            $("#mobile-team-controls #left").removeClass("disabled");
+            $("#team-member-controls #prev-member").removeClass("disabled");
+            // $("#mobile-team-controls #left").removeClass("disabled");
         }
         if (currentMember == (teamMembers.length - 1)) {
-            $("#right").addClass("disabled");
+            $("#next-member").addClass("disabled");
         }
         else {
-            $("#right").removeClass("disabled");
+            $("#next-member").removeClass("disabled");
         }
     }
 }
@@ -162,26 +178,26 @@ function showNextMember() {
     if (currentMember != (teamMembers.length - 1)) {
         currentMember += 1;
         let member = teamMembers[currentMember]
-        $("#member-name").html(member.name);
-        $("#member-description").html(member.bio);
-        $("#member-img").attr("src", member.img);
-        $("#member-twitter-link").attr("href", member.twitter);
+        $("#team-member-name").html(member.name);
+        $("#team-member-caption").html(member.bio);
+        // $("#member-img").attr("src", member.img);
+        $("#team-member-twitter-link").attr("href", member.twitter);
 
         if (currentMember == 0) {
-            $("#team-controls #left").addClass("disabled");
-            $("#mobile-team-controls #left").addClass("disabled");
+            $("#team-member-controls #prev-member").addClass("disabled");
+            // $("#mobile-team-controls #left").addClass("disabled");
         }
         else {
-            $("#team-controls #left").removeClass("disabled");
-            $("#mobile-team-controls #left").removeClass("disabled");
+            $("#team-member-controls #prev-member").removeClass("disabled");
+            // $("#mobile-team-controls #left").removeClass("disabled");
         }
         if (currentMember == (teamMembers.length - 1)) {
-            $("#team-controls #right").addClass("disabled");
-            $("#mobile-team-controls #right").addClass("disabled");
+            $("#team-member-controls #next-member").addClass("disabled");
+            // $("#mobile-team-controls #right").addClass("disabled");
         }
         else {
-            $("#team-controls #right").removeClass("disabled");
-            $("#mobile-team-controls #right").removeClass("disabled");
+            $("#team-member-controls #next-member").removeClass("disabled");
+            // $("#mobile-team-controls #right").removeClass("disabled");
         }
     }
 }

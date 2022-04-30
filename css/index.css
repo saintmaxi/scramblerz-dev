@@ -26,6 +26,35 @@
     height: 10vh !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    transition: all .5s ease;
+}
+
+#sound-control {
+    transition: all .5s ease;
+}
+
+#top.landing {
+    background-color: transparent;
+}
+
+#top.landing #sound-control {
+    background-color: #436DA8;
+}
+
+#top.story {
+    background-color: #436DA8;
+}
+
+#top.story #sound-control {
+    background-color: var(--landing-bg);
+}
+
+#top.team {
+    background-color: #436DA8;
+}
+
+#top.team #sound-control {
+    background-color: var(--landing-bg);
 }
 
 #top .link {
@@ -1082,7 +1111,7 @@ color: white;
     opacity: .6;
 }
 
-#member-stats {
+/* #member-stats {
     width: 40%;
     position: absolute;
     left: 15%;
@@ -1125,9 +1154,140 @@ color: white;
 
 #last-stat {
     border-bottom: none;
-}
+} */
 
 /* end team */
+
+/* mission start */
+
+#mission {
+    position: relative;
+    height: 90%;
+}
+
+#mission-inner {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+}
+
+#mission-inner h1 {
+    margin: 0;
+}
+
+#mission-inner h3 {
+    margin: 0;
+    color: #436DA8;
+}
+
+#mission-inner h4 {
+    margin: 0;
+}
+
+#team-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.team-info {
+    width: 31%;
+    background-color: #E08A89;
+    border: solid .25vw black;
+    border-radius: 2.5vw;
+    padding: 2vw;
+    position: relative;
+    min-height: 60vh;
+}
+
+.team-twitter {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 15%;
+}
+
+.team-twitter:hover {
+    opacity: .6;
+}
+
+.team-info h1 {
+    font-size: 2.5vw !important;
+    line-height: 2.5vw !important;
+    color: white;
+    letter-spacing: 0;
+}
+
+.team-info p {
+    color: rgb(48, 47, 47);
+}
+
+.team-info p a {
+    text-decoration: none;
+    color: white;
+}
+
+.team-stats {
+    width: 90%;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+.stat-value {
+    display: flex;
+    padding: .5vw;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.stat {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat:nth-child(1) {
+    border-top: solid black 2px;
+}
+
+.stat:nth-child(2) {
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+}
+
+.stat:nth-child(3) {
+    border-bottom: solid black 2px;
+}
+
+.stat-name {
+    width: 65%;
+    padding: .5vw;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.stat-name h2 {
+    margin: 0;
+}
+
+.stat-value {
+    width: 35%;
+    border-left: solid black 1px;
+}
+
+.stat-value img {
+    width: 20%;
+}
+
+#last-stat {
+    border-bottom: none;
+}
+
+/* mission end */
 
 /* mint section */
 
@@ -1953,6 +2113,91 @@ color: white;
     }
 
     /* end team section styling */
+
+    /* mission start */
+
+    #team-member-controls {
+        position: absolute;
+        width: 25%;
+        top: 5%;
+        right: 5%;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 99999;
+    }
+
+    #next-member, #prev-member {
+        touch-action: manipulation;
+        width: 47%;
+        padding: 1vh;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: var(--landing-bg);
+        border-radius: 10px;
+        border: solid 5px black;
+    }
+
+    #next-member.disabled, #prev-member.disabled {
+        transition: none;
+        opacity: .6;
+    }
+    
+    #next-member.disabled:hover, #prev-member.disabled:hover {
+        transform: none;
+        cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAAAAACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAA////AABl/QDx8fEAd3d3AADa/QBVVVUA29vbABkYGADu7u4AAMv9AMzMzACTk5IA5ubmAIiIiAAAmP0A7OzsAERERADl5eUAAP39AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4ODg4ODg4ODg4OAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4ODg4ODg4ODg4AAAAAAAAAAAAAAAAAAAAAAAEBCwsLCwsLCwsLCwsLCw4ODgAAAAAAAAAAAAAAAAAAAQELCwsLCwsLCwsLCwsLDg4OAAAAAAAAAAAAABERAQEBAQEBAQEBAQEBAQEBCwsLCwsODgAAAAAAAAAAEREBAQEBAQEBAQENDQ0NDQ0SEgsLCw4OAAAAAAAAAAAREQEBAQEBAQEBAQsLCwsLCwEBCwsLDg4AAAAAAAAGBgEBAQEBAQEBCQICAgICAg4OCwsBCwsLCw4OAAAAAAYGAQEBAQEBAQEJAgICAgICDg4LCwELCwsLDg4AAAAABgYBAQEBAQEBAQIPDw8PDw8CAg4OCwEBCwsODgAAAAAGBgEBAQEBAQEBAg8PDw8PDwICDg4LAQELCw4OAAAAAAYGAQEBAQEBDw8KExMKCg8PDw8CAgsBAQsLDg4AAAAABgYBAQEBAQEPDwoTEwoKDw8PDwICCwEBCwsODgAAAAAGBgEBAQEBAQ8PExMTExMKCg8PAgILAQELCw4OAAAAAAYGAQEBAQEBDw8TExMTEwUFDw8CAgcBAQsLDg4AAAAABgYBAQEBAQEPDxMTExMTExMPDwICAQEBCwsODgAAAAAGBgEBAQEBAQEBDxMTExMKCgICCQkBAQELCw4OAAAAAAYGAQEBAQEBAQEPExMTEwoKAgIJCQEBAQsLDg4AAAAAAAAEBAEBAQEBAQEPDw8PDw8BAQEBAQEBCwsAAAAAAAAAAAQEAQEBAQEBAQ8PDw8PDwEBAQEBAQELCwAAAAAAAAAABAQBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAEBAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAADg4BAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAMDAMDAwMBAQEBAQEBAQEBARAQEAgIAAAAAAAAAAAAAAAABAQEBAEBAQEBAQEBAQEBERERAAAAAAAAAAAACgAAAAAAAAAABgYGBgYGBgYGBgYAAAAAAAAAAAAAAAAKCgAAAAAAAAAGBgYGBgYGBgYGBgAAAAAAAAAAAAAAAAoKCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////wAf//8AH//wAAP/8AAD/8AAAP/AAAD/AAAAPwAAAD8AAAA8AAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAA8AAAA/AAAAPwAAAD8AAAA/wAAA/cAAAPzwAAP8fwAf/D8AH/wf///8D////'), auto;
+    }
+
+    #next-member, #prev-member {
+        transition: transform ease 300ms;
+    }
+
+    #next-member:hover, #prev-member:hover {
+        cursor: pointer;
+    }
+    
+    #prev-member:hover {
+        cursor: pointer;
+        transform: translate(-3px, 0px);
+    }
+    
+    #next-member:hover {
+        cursor: pointer;
+        transform: translate(3px, 0px);
+    }
+
+    #mission {
+        height: 100%;
+    }
+
+    #team-wrapper {
+        display: block;
+        width: 100%;
+    }
+
+    #mission-inner {
+        width: 100%;
+        left: 0;
+    }
+
+    #mission h1, #mission h3 {
+        padding-left: 10px;
+    }
+
+    #mission h1 {
+        font-size: 5vh !important;
+        line-height: 5vh !important;
+    }
+
+    .team-info {
+        margin: auto;
+        width: 90%;
+        border-radius: 20px;
+        border-width: 5px;
+        padding: 3vh;
+    }
+
+    /* mission end */
 
     p {
         padding: 20px;
