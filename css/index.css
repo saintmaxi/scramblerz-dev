@@ -2123,7 +2123,7 @@ color: white;
     #team-member-controls {
         position: absolute;
         width: 25%;
-        top: 3%;
+        top: 1.5%;
         right: 5%;
         display: flex !important;
         flex-direction: row;
