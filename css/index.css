@@ -34,7 +34,7 @@
 }
 
 #top.landing {
-    background-color: transparent;
+    background-color: var(--landing-bg);
 }
 
 #top.landing #sound-control {
@@ -1490,8 +1490,8 @@ color: white;
         padding-top: 10px !important;
         margin: 0;
         padding: 2%;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        /* backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); */
     }
 
     #title {
