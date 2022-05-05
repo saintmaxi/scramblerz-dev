@@ -1624,12 +1624,17 @@ color: white;
     /* background-color: #5AA6F5; */
     background-color: var(--landing-bg);
         text-align: center;
-        display: block;
+        display: inline-block;
         padding-top: 10px !important;
         margin: 0;
         padding: 2%;
         /* backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px); */
+    }
+
+    .img-wrapper {
+        display: inline-block;
+
     }
 
     #title {
