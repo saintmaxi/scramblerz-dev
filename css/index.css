@@ -116,6 +116,7 @@
     left: 0%;
     top: 0%;
     overflow: hidden;
+    transition: all .5s;
     /* transform: rotate(90deg); */
 }
 
