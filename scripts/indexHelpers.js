@@ -1,12 +1,12 @@
 $(function() {
-    var trait = $(".trait");
-    var art = $("#art");
-    var artBottom = art.offset().top + art.outerHeight()*.75;
-    var windowHeight = $(window).height();
+    let trait = $(".trait");
+    let art = $("#art");
+    let artBottom = art.offset().top + art.outerHeight()*.75;
+    let windowHeight = $(window).height();
 
 
     $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
+        let scroll = $(window).scrollTop();
 
         // let's fire up animation when .box is in view
 
@@ -22,32 +22,56 @@ $('#mouth').on("animationend", function(){
     $("#body").attr("src", "images/sampleegg.gif")
 });
 
+let angle = document.querySelector("#eyeball-1");
+let coords = angle.getBoundingClientRect()
+let p2 = {
+  x: (coords.right + coords.left)/2,
+  y: (coords.top + coords.bottom)/2
+};
+document.addEventListener("mousemove", function(e) {
+  let p1 = {
+    x: e.pageX,
+    y: e.pageY
+  };
+  let angleDeg = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
+  let rotation = 270-Math.abs(Math.round(angleDeg));
+  $(".eyeball").css("transform", `rotate(${rotation}deg)`)
+})
+
 // $('#shoes').on("animationend", function(){
 //     $("#art-info").addClass("animate");
 // });
 
-var muted = true;
-var audio = $("#song")[0];
+let muted = true;
+let audio = $("#song")[0];
 
 function mute() {
     if (muted) {
         muted = false;
-        $("#sound-control").attr("src", "./images/unmute.png");
+        $("#music-button").attr("src", "./images/unmuted.png");
         audio.play();
     }
     else {
         muted = true;
-        $("#sound-control").attr("src", "./images/mute.png");
+        $("#music-button").attr("src", "./images/muted.png");
         audio.pause();
     }
 }
 
-var windowsize = $(window).width();
+$("#early-access-clickable").hover(
+    function() {
+      $("#early-access").css("opacity", .6);
+    }, function() {
+        $("#early-access").css("opacity", 1);
+    }
+  );
+
+let windowsize = $(window).width();
 
 function scrollStory(number) {
     // $('#story-info').scrollTop($('#story-info').scrollTop() + $(`#info-${number}`).position().top);
-    var parentElement = document.querySelector('#story-info');
-    var childElement = document.querySelector(`#info-${number}`);
+    let parentElement = document.querySelector('#story-info');
+    let childElement = document.querySelector(`#info-${number}`);
 
     let multiplier = windowsize >= 991 ? .05 : 0;
     // multiplier=0
@@ -62,14 +86,14 @@ function scrollStory(number) {
 }
 
 document.getElementById("story-info").addEventListener('scroll', function() {
-	var info1 = $('#info-1');
-	var position1 = info1.position();
-    var info2 = $('#info-2');
-	var position2 = info2.position();
-    var info3 = $('#info-3');
-	var position3 = info3.position();
-    // var info4 = $('#info-4');
-	// var position4 = info4.position();
+	let info1 = $('#info-1');
+	let position1 = info1.position();
+    let info2 = $('#info-2');
+	let position2 = info2.position();
+    let info3 = $('#info-3');
+	let position3 = info3.position();
+    // let info4 = $('#info-4');
+	// let position4 = info4.position();
 
     let multiplier = windowsize >= 991 ? .25 : .55;
     // let multiplier = 0
@@ -101,8 +125,8 @@ document.getElementById("story-info").addEventListener('scroll', function() {
 	}
 });
 
-var story = $("#story").position().top;
-var team =  $("#team").position().top;
+let story = $("#story").position().top;
+let team =  $("#team").position().top;
 
 document.addEventListener('scroll', function() {
     let currentTop = $(window).scrollTop();
@@ -123,10 +147,10 @@ document.addEventListener('scroll', function() {
     }
 });
 
-var info1Top = $('#info-1').position().top;
-var info3Top = $('#info-3').position().top;
+let info1Top = $('#info-1').position().top;
+let info3Top = $('#info-3').position().top;
 let infoDist = info3Top - info1Top;
-var infoScrollEffectOn = true;
+let infoScrollEffectOn = true;
 
 document.getElementById("story-info").addEventListener('scroll', function() {
     if (infoScrollEffectOn) {
@@ -144,7 +168,7 @@ document.getElementById("story-info").addEventListener('scroll', function() {
 });
 
 
-var currentMember = 0;
+let currentMember = 0;
 const teamMembers = [
     {
         name: "DANIEL<br>NORRIS",

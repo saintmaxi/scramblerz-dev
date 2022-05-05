@@ -1,5 +1,5 @@
 :root {
-    --landing-bg: #7CA7EB;
+    --landing-bg: #5AA9FF;
 }
 
 @keyframes blinker {
@@ -10,12 +10,13 @@
 
 /* start header/navbar styling */
 
-#top  {
+#top {
     position: fixed;
     top: 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     color: white !important;
     /* background-color: #6FA9F2; */
     /* background-color: #5AA6F5; */
@@ -91,14 +92,44 @@
 
 #corner-eyes {
     height: 80%;
+    width: 100%;
+    text-align: center;
+}
+
+#title-section .img-wrapper {
+    width: 20%;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-wrapper {
+    position: relative;
+}
+
+.eyeball {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    overflow: hidden;
+    /* transform: rotate(90deg); */
 }
 
 #header {
-    width: 50%;
+    width: 60%;
+    height: 70%;
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
+    background-color: #528DCE;
+    border-radius: 2vw;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 @keyframes wiggle {
@@ -126,7 +157,7 @@
 }
 
 .header-img {
-    width: 15%;
+    width: 25%;
     background-color: transparent;
 }
 
@@ -139,9 +170,18 @@
 	font-size: 1.4vw;
     line-height: 1.4vw;
     letter-spacing: 3px;
-    width: 23%;
-    margin: 1%;
+    width: 17%;
+    /* margin: %; */
     text-align: center;
+    font-family: "Scramblerz-wide";
+}
+
+.header-menu:nth-child(3) {
+    width: 22%;
+}
+
+.header-menu:nth-child(3) .header-img {
+    width: 18%;
 }
 
 .header-menu a {
@@ -154,8 +194,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 15%;
+    width: 10%;
+    height: 70%;
     padding: .5%;
+    background-color: white;
+    border-radius: 2vw;
 }
 
 #socials a {
@@ -180,14 +223,42 @@
     opacity: .8;
 }
 
+#music-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    width: 8vw;
+    height: 8vw;
+}
+
+#music-button-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 8vw;
+    height: 8vw;
+    -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    z-index: 21;
+}
+
+#music-button-overlay:hover {
+    cursor: pointer !important;
+}
+
 /* end header/navbar styling */
 
 .color-block {
     position: absolute;
     width: 100%;
+    /* height: 200%; */
     height: 30%;
+    /* bottom: -100%; */
     bottom: 0%;
     z-index: 0;
+    /* border-radius: 50% 60% 50% 50% / 70% 70% 40% 40%; */
+    /* border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; */
 }
 
 /* start landing styling */
@@ -220,22 +291,86 @@
     background-size: cover;
 }
 
+#logo-text {
+    position: absolute;
+    right: 8%;
+    top:38%;
+    z-index:13;
+    font-size: 13vw !important;
+    color:white;
+    text-shadow: .5vw 3px #000000;
+}
+
+#logo-container-outer {
+    position:absolute;
+    height: 80%;
+    right:-22%;
+    top:20%
+}
+
+#logo-container-inner {
+    position: relative;
+    height:100%;
+}
+
+#yolk {
+    position:relative;
+    height:100%;
+    z-index: 10;
+}
+
+#early-access {
+    position:absolute;
+    bottom:10%;
+    right:35%;
+    height: 11.5% !important;
+    width: 25%;
+    z-index: 9;
+    transition: all .2s;
+    font-family: 'Krub', sans-serif;
+}
+
+#early-access {
+    background-color: black !important;
+}
+
+#early-access-clickable {
+    position:absolute;
+    bottom:10%;
+    right:35%;
+    height: 11.5%;
+    width: 25%;
+    z-index: 11;
+    background-color: transparent;
+}
+
+#early-access-clickable:hover {
+    cursor: pointer;
+}
+
+
 #landing-block {
-    background-color: #436DA8;
+    background-color: #436DAA;
 }
 
 #landing-caption {
+    font-family: "Scramblerz-wide-3";
+    /* letter-spacing: 3px; */
     color: white;
-    text-align: center;
+    text-align: left;
     position: absolute;
     width: 50%;
-    bottom: 40%;
-    right: 13%;
+    bottom: 8%;
+    left: 8%;
     z-index: 9999;
 }
 
 #landing h2 {
     color: white !important;
+}
+
+#early-access img {
+    width: 3vw;
 }
 
 #coming-soon {
@@ -474,17 +609,19 @@
 
 #landing-gif {
     position: absolute;
-    width: 40%;
-    bottom: 10%;
-    left: 2%;
+    /* width: 50%; */
+    height: 80%;
+    bottom: 12%;
+    left: -3%;
     -webkit-animation: fade-in .75s ease-out;
     animation: fade-in .75s ease-out;
 }
 
 #landing-logo {
     position: absolute;
-    width: 60%;
-    top: 15%;
+    width: 65%;
+    height: 40%;
+    top: 20%;
     right: 5%;
     z-index: 2;
 }
