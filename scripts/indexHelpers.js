@@ -30,8 +30,8 @@ let p2 = {
 };
 document.addEventListener("mousemove", function(e) {
   let p1 = {
-    x: e.pageX,
-    y: e.pageY
+    x: e.clientX,
+    y: e.clientY
   };
   let angleDeg = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
   let rotation = 270-Math.abs(Math.round(angleDeg));
