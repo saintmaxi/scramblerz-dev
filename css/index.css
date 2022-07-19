@@ -326,7 +326,7 @@
     right:35%;
     height: 11.5% !important;
     width: 25%;
-    z-index: 9;
+    z-index: 100;
     transition: all .2s;
     font-family: 'Krub', sans-serif;
 }
@@ -341,7 +341,7 @@
     right:35%;
     height: 11.5%;
     width: 25%;
-    z-index: 11;
+    z-index: 101;
     background-color: transparent;
 }
 
@@ -1606,6 +1606,43 @@ color: white;
 @media screen and (max-width: 991px) {
     /* start header-navbar styling */
 
+    #music-button {
+        width: 15vw;
+        height: 15vw;
+    }
+    
+    #music-button-overlay {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    #early-access {
+        background-color: black !important;
+        bottom: 47%;
+        width: 40%;
+        right: 20%;
+    }
+    
+    #early-access-clickable {
+        bottom: 47%;
+        width: 40%;
+        right: 20%;
+    }
+
+    #early-access img {
+        font-size: 3vh;
+    }
+
+    #yolk {
+        height:initial;
+        width: 100%;
+    }
+
+    #logo-text {
+        top: 27%;
+        font-size: 18vw !important;
+    }
+
     #top {
         display: initial;
         position: initial;
@@ -1655,6 +1692,7 @@ color: white;
         justify-content: center;
         width: 100%;
         padding: 0%;
+        border-radius: 0;
     }
 
     #socials a {
@@ -1688,6 +1726,7 @@ color: white;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        border-radius: 0;
         margin: 0;
         padding-top: 5px;
         padding-bottom: 5px;
@@ -1830,8 +1869,9 @@ color: white;
     #landing-gif {
         /* display: block; 
         position: relative;  */
-        width: 80%;
-        left: -13%;
+        width: inherit;
+        height: 50%;
+        left: -15%;
         bottom: 5%;
         z-index: 10;
     }
