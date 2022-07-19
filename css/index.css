@@ -326,7 +326,7 @@
     right:35%;
     height: 11.5% !important;
     width: 25%;
-    z-index: 100;
+    z-index: 9;
     transition: all .2s;
     font-family: 'Krub', sans-serif;
 }
@@ -352,6 +352,7 @@
 
 #landing-block {
     background-color: #436DAA;
+    border-bottom: 2px solid black;
 }
 
 #landing-caption {
@@ -1630,7 +1631,7 @@ color: white;
     }
 
     #early-access img {
-        font-size: 3vh;
+        width: 3.5vh !important;
     }
 
     #yolk {
@@ -1639,8 +1640,9 @@ color: white;
     }
 
     #logo-text {
-        top: 27%;
+        top: 26%;
         font-size: 18vw !important;
+        line-height: 18vw !important;
     }
 
     #top {
