@@ -1619,14 +1619,16 @@ color: white;
 
     #early-access {
         background-color: black !important;
-        bottom: 38.5%;
+        bottom: 38%;
         width: 40%;
+        height: 12.5%;
         right: 20%;
     }
     
     #early-access-clickable {
-        bottom: 38.5%;
+        bottom: 38%;
         width: 40%;
+        height: 12.5%;
         right: 20%;
     }
 
